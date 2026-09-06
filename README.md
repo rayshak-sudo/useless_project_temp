@@ -1,103 +1,103 @@
-<img width="1280" height="640" alt="git (1)" src="https://github.com/user-attachments/assets/8920b256-2ba8-4988-b824-5351134eb4bd" />
+# 🎨 AirCube Studio
 
+A browser-based **3D hand-gesture cube painter** — no installation needed. Just open it in Chrome/Edge with a webcam and start painting in the air!
 
-
-# [Project Name] 🎯
-
-
-## Basic Details
-### Team Name: [Name]
-
-
-### Team Members
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
-
-### Project Description
-[2-3 lines about what your project does]
-
-### The Problem (that doesn't exist)
-[What ridiculous problem are you solving?]
-
-### The Solution (that nobody asked for)
-[How are you solving it? Keep it fun!]
-
-## Technical Details
-### Technologies/Components Used
-For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
-
-For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
-
-### Implementation
-For Software:
-# Installation
-[commands]
-
-# Run
-[commands]
-
-### Project Documentation
-For Software:
-
-# Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
-
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
-
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
-
-# Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
-
-For Hardware:
-
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
-
-# Build Photos
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
-
-### Project Demo
-# Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
-
-# Additional Demos
-[Add any extra demo materials/links]
-
-## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+![AirCube Studio](https://img.shields.io/badge/WebGL-Three.js-blue) ![MediaPipe](https://img.shields.io/badge/AI-MediaPipe%20Hands-green) ![License](https://img.shields.io/badge/license-MIT-orange)
 
 ---
-Made with ❤️ at TinkerHub Useless Projects 
 
-![Static Badge](https://img.shields.io/badge/TinkerHub-24?color=%23000000&link=https%3A%2F%2Fwww.tinkerhub.org%2F)
-![Static Badge](https://img.shields.io/badge/UselessProjects--26-26?link=https%3A%2F%2Ftinkerhub.org%2Fevents%2F1M8ORET9A1%2Fuseless-projects-3.0)
+## ✨ Features
 
+- 🖐️ **Real-time hand tracking** via MediaPipe Hands (no backend needed)
+- 🎲 **Interactive 3D cube** rendered with Three.js
+- 🎨 **Paint directly on cube faces** using your fingertip
+- 🤏 **Pinch to rotate** the cube in 3D space
+- ✌️ **Peace sign / thumb-middle snap** to cycle through colours
+- 👐 **Two-handed scale** to resize the cube
+- 📷 **PiP webcam card** with live hand skeleton overlay
+- 🌑 Sleek dark cyberpunk UI — no frameworks, pure HTML/CSS/JS
 
+---
 
+## 🎮 Gesture Controls
+
+| Gesture | Action |
+|---|---|
+| ☝️ Index finger extended | **Paint** on the cube face |
+| 🤏 Thumb + Index pinch | **Rotate** the cube |
+| ✌️ Peace sign (Index + Middle up) | **Cycle colour** palette |
+| 👐 Both hands open | **Scale** the cube |
+
+---
+
+## 🚀 Running Locally
+
+> Pure static files — no build step required!
+
+### Option 1: Python (built-in)
+```bash
+cd AirCubeStudio
+python -m http.server 8000
+# Open http://localhost:8000
+```
+
+### Option 2: Use the included launcher
+```bash
+python serve.py
+# Auto-opens your browser
+```
+
+### Option 3: VS Code Live Server
+Install the [Live Server extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) and click **Go Live**.
+
+> ⚠️ **Must be served over HTTP/HTTPS** — opening `index.html` directly as a `file://` URL will block webcam access.
+
+---
+
+## 🌐 Hosting on GitHub Pages
+
+1. Push this repo to GitHub
+2. Go to **Settings → Pages**
+3. Set source to **`main` branch, `/ (root)`**
+4. Visit `https://<your-username>.github.io/AirCubeStudio/`
+
+> Works entirely client-side — no server needed for GitHub Pages!
+
+---
+
+## 🗂️ Project Structure
+
+```
+AirCubeStudio/
+├── index.html          # Main app shell
+├── style.css           # Dark cyberpunk theme
+├── serve.py            # Local dev server launcher
+└── js/
+    ├── app.js          # Gesture → action coordinator
+    ├── cube-studio.js  # Three.js 3D cube + painting engine
+    └── hand-tracker.js # MediaPipe hand landmark pipeline
+```
+
+---
+
+## 🛠️ Tech Stack
+
+| Library | Version | Purpose |
+|---|---|---|
+| [Three.js](https://threejs.org/) | r128 | 3D rendering |
+| [MediaPipe Hands](https://google.github.io/mediapipe/solutions/hands) | Latest CDN | Hand landmark detection |
+| Vanilla JS / HTML5 Canvas | — | UI & texture painting |
+
+---
+
+## 📋 Requirements
+
+- **Browser**: Chrome or Edge (Firefox may have WebGL/MediaPipe issues)
+- **Webcam**: Required for hand tracking
+- **HTTPS or localhost**: Required for camera API access
+
+---
+
+## 📄 License
+
+MIT — free to use, modify, and share.
